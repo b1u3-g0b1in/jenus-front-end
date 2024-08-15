@@ -3,36 +3,36 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # Change this if your default branch is not 'main'
+      - main  # Change this if your default branch is not 'main'
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: "16" # Specify the node version you want to use
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18'  # Update node version to 18 or higher
 
-      - name: Install Angular CLI
-        run: |
-          npm install -g @angular/cli  # Install Angular CLI globally
+    - name: Install Angular CLI
+      run: |
+        npm install -g @angular/cli  # Install Angular CLI globally
 
-      - name: Install dependencies
-        run: |
-          npm install
+    - name: Install dependencies
+      run: |
+        npm install
 
-      - name: Build the Angular application
-        run: |
-          ng build --configuration=production --output-path docs --base-href /janus-front-end/
+    - name: Build the Angular application
+      run: |
+        ng build --configuration=production --output-path docs --base-href /janus-front-end/
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs
-          publish_branch: main # This is the branch that GitHub Pages serves from
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: docs
+        publish_branch: gh-pages  # This is the branch that GitHub Pages serves from
