@@ -1,28 +1,34 @@
-name: Angular CI
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - "*"
-  pull_request:
-    branches:
-      - "*"
+      - main # Change this if your default branch is not 'main'
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm install
-      - run: npm run build --if-present
-      # ! testing paused until tests are added
-      # - run: npm test
+          node-version: "16" # Specify the node version you want to use
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Build the Angular application
+        run: |
+          ng build --configuration=production --output-path docs --base-href /janus-front-end/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs
+          publish_branch: gh-pages # This is the branch that GitHub Pages serves from
