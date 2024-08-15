@@ -1,4 +1,18 @@
+plugins = []
+
+headers = []
+
+[functions]
+
+[functions."*"]
+
+[build]
+  publish = "D:\\Code\\Janus\\janus-front-end\\dist"
+  publishOrigin = "ui"
+  commandOrigin = "ui"
+  command = "npm run build"
+
 [[redirects]]
-from = "/*"
-to= "/index.html"
-status = 200
+  from = "/*"
+  to = "/index.html"
+  status = 200
