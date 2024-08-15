@@ -7,7 +7,7 @@ headers = []
 [functions."*"]
 
 [build]
-  publish = "D:\\Code\\Janus\\janus-front-end\\dist"
+  publish = "D:\\Code\\Janus\\jenus-front-end\\dist"
   publishOrigin = "ui"
   commandOrigin = "ui"
   command = "npm run build"
