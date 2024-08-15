@@ -18,6 +18,10 @@ jobs:
         with:
           node-version: "16" # Specify the node version you want to use
 
+      - name: Install Angular CLI
+        run: |
+          npm install -g @angular/cli  # Install Angular CLI globally
+
       - name: Install dependencies
         run: |
           npm install
@@ -31,4 +35,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: docs
-          publish_branch: gh-pages # This is the branch that GitHub Pages serves from
+          publish_branch: main # This is the branch that GitHub Pages serves from
