@@ -5,6 +5,7 @@ import { MaintenanceComponent } from './maintenance/maintenance.component';
 const routes: Routes = [
   { path: 'maintenance', component: MaintenanceComponent },
   { path: '**', redirectTo: 'maintenance' },
+  { path: '', redirectTo: 'maintenance', pathMatch: 'full' },
 ];
 
 @NgModule({
