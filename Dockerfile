@@ -1,6 +1,7 @@
 # syntax=docker/dockerfile:1.4
 
-FROM node:17.0.1-alpine3.14 as builder
+# automatically use latest version of node
+FROM node:22-alpine as builder
 
 RUN mkdir /project
 WORKDIR /project
