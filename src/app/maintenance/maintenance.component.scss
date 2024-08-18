@@ -1,10 +1,9 @@
-
 $color-background: #121212;
 $color-text: #f5f5f5;
 $color-white: #ffffff;
-$color-purple-light: #e5d4ed;
-$color-purple-mid: #6d72c3;
-$color-purple-dark: #5941a9;
+$color-purple-light: #a0503e;
+$color-orange-mid: #a72608;
+$color-purple-dark: #801700;
 $color-grey: #514f59;
 $color-dark: #1d1128;
 
@@ -31,14 +30,13 @@ body,
 }
 
 .hello-parent {
-  background: $color-white; 
-  margin-bottom: 20px; 
+  background: $color-white;
+  margin-bottom: 20px;
 }
 
 .hello-word {
   margin: auto;
 }
-
 
 .H-left-stroke,
 .H-mid-stroke,
@@ -62,25 +60,46 @@ body,
 }
 
 @keyframes H-left-move {
-  0% { stroke-dashoffset: 124px; }
-  5% { stroke-dashoffset: 0px; }
-  100% { stroke-dashoffset: 0px; }
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  5% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
 }
 
 @keyframes H-mid-move {
-  0% { stroke-dashoffset: 37px; }
-  5% { stroke-dashoffset: 37px; }
-  10% { stroke-dashoffset: 0px; }
-  100% { stroke-dashoffset: 0px; }
+  0% {
+    stroke-dashoffset: 37px;
+  }
+  5% {
+    stroke-dashoffset: 37px;
+  }
+  10% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
 }
 
 @keyframes H-right-move {
-  0% { stroke-dashoffset: 124px; }
-  5% { stroke-dashoffset: 124px; }
-  10% { stroke-dashoffset: 0px; }
-  100% { stroke-dashoffset: 0px; }
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  5% {
+    stroke-dashoffset: 124px;
+  }
+  10% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
 }
-
 
 .E-left-stroke,
 .E-top-stroke,
@@ -112,35 +131,65 @@ body,
   }
 }
 
-
 @keyframes E-left-move {
-  0% { stroke-dashoffset: 124px; }
-  2% { stroke-dashoffset: 124px; }
-  6% { stroke-dashoffset: 0px; }
-  100% { stroke-dashoffset: 0px; }
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  2% {
+    stroke-dashoffset: 124px;
+  }
+  6% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
 }
 
 @keyframes E-top-move {
-  0% { stroke-dashoffset: 47px; }
-  6% { stroke-dashoffset: 47px; }
-  11% { stroke-dashoffset: 0px; }
-  100% { stroke-dashoffset: 0px; }
+  0% {
+    stroke-dashoffset: 47px;
+  }
+  6% {
+    stroke-dashoffset: 47px;
+  }
+  11% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
 }
 
 @keyframes E-mid-move {
-  0% { stroke-dashoffset: 42px; }
-  8% { stroke-dashoffset: 42px; }
-  13% { stroke-dashoffset: 0px; }
-  100% { stroke-dashoffset: 0px; }
+  0% {
+    stroke-dashoffset: 42px;
+  }
+  8% {
+    stroke-dashoffset: 42px;
+  }
+  13% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
 }
 
 @keyframes E-bottom-move {
-  0% { stroke-dashoffset: 47px; }
-  11% { stroke-dashoffset: 47px; }
-  16% { stroke-dashoffset: 0px; }
-  100% { stroke-dashoffset: 0px; }
+  0% {
+    stroke-dashoffset: 47px;
+  }
+  11% {
+    stroke-dashoffset: 47px;
+  }
+  16% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
 }
-
 
 .L-one-long-stroke,
 .L-one-short-stroke {
@@ -158,21 +207,35 @@ body,
   }
 }
 
-
 @keyframes L-one-long-move {
-  0% { stroke-dashoffset: 124px; }
-  2% { stroke-dashoffset: 124px; }
-  7% { stroke-dashoffset: 0px; }
-  100% { stroke-dashoffset: 0px; }
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  2% {
+    stroke-dashoffset: 124px;
+  }
+  7% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
 }
 
 @keyframes L-one-short-move {
-  0% { stroke-dashoffset: 44px; }
-  13% { stroke-dashoffset: 44px; }
-  18% { stroke-dashoffset: 0px; }
-  100% { stroke-dashoffset: 0px; }
+  0% {
+    stroke-dashoffset: 44px;
+  }
+  13% {
+    stroke-dashoffset: 44px;
+  }
+  18% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
 }
-
 
 .L-two-long-stroke,
 .L-two-short-stroke {
@@ -190,21 +253,35 @@ body,
   }
 }
 
-
 @keyframes L-two-long-move {
-  0% { stroke-dashoffset: 124px; }
-  3% { stroke-dashoffset: 124px; }
-  8% { stroke-dashoffset: 0px; }
-  100% { stroke-dashoffset: 0px; }
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  3% {
+    stroke-dashoffset: 124px;
+  }
+  8% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
 }
 
 @keyframes L-two-short-move {
-  0% { stroke-dashoffset: 44px; }
-  15% { stroke-dashoffset: 44px; }
-  20% { stroke-dashoffset: 0px; }
-  100% { stroke-dashoffset: 0px; }
+  0% {
+    stroke-dashoffset: 44px;
+  }
+  15% {
+    stroke-dashoffset: 44px;
+  }
+  20% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
 }
-
 
 .O-stroke {
   stroke-dasharray: 302px;
@@ -212,13 +289,20 @@ body,
   animation: O-move 20s ease forwards;
 
   @keyframes O-move {
-    0% { stroke-dashoffset: 302px; }
-    4% { stroke-dashoffset: 302px; }
-    9% { stroke-dashoffset: 0px; }
-    100% { stroke-dashoffset: 0px; }
+    0% {
+      stroke-dashoffset: 302px;
+    }
+    4% {
+      stroke-dashoffset: 302px;
+    }
+    9% {
+      stroke-dashoffset: 0px;
+    }
+    100% {
+      stroke-dashoffset: 0px;
+    }
   }
 }
-
 
 .red-dot {
   stroke-width: 44px;
@@ -227,26 +311,33 @@ body,
 }
 
 @keyframes red-dot-grow {
-  0% { stroke-width: 0px; }
-  15% { stroke-width: 0px; }
-  20% { stroke-width: 44px; }
-  100% { stroke-width: 44px; }
+  0% {
+    stroke-width: 0px;
+  }
+  15% {
+    stroke-width: 0px;
+  }
+  20% {
+    stroke-width: 44px;
+  }
+  100% {
+    stroke-width: 44px;
+  }
 }
 
-
 .dev-btn {
-  background: $color-purple-mid;
+  background: $color-orange-mid;
   border: none;
   z-index: 1;
   position: relative;
-  border-radius: 30px; 
-  color: #fff; 
-  padding: 15px 30px; 
-  font-size: 1.2em; 
-  text-transform: uppercase; 
-  transition: all 0.3s ease; 
-  cursor: pointer; 
-  outline: none; 
+  border-radius: 30px;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  outline: none;
 
   &:after {
     position: absolute;
@@ -257,15 +348,14 @@ body,
     right: 0;
     z-index: -1;
     background-color: $color-purple-dark;
-    border-radius: 30px; 
+    border-radius: 30px;
     box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-                7px 7px 20px 0px rgba(0, 0, 0, 0.1),
-                4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+      7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
   }
 
   &:hover {
-    background: $color-purple-dark; 
+    background: $color-purple-dark;
 
     &:after {
       left: 0;
@@ -274,6 +364,6 @@ body,
   }
 
   &:active {
-    transform: scale(0.98); 
+    transform: scale(0.98);
   }
 }

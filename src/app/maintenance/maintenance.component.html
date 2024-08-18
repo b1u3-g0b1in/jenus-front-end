@@ -4,6 +4,7 @@
   <div class="content">
     <div class="hello-parent">
       <svg class="hello-word" width="320" height="300" viewBox="0 0 365 365">
+        <!-- H Letter -->
         <g id="H-letter">
           <line
             class="H-left-stroke"
@@ -36,6 +37,7 @@
             stroke-width="34"
           />
         </g>
+        <!-- E Letter -->
         <g id="E-letter">
           <line
             class="E-left-stroke"
@@ -78,6 +80,7 @@
             stroke-width="34"
           />
         </g>
+        <!-- L Letters -->
         <g id="L-one-letter">
           <line
             class="L-one-long-stroke"
@@ -122,6 +125,7 @@
             stroke-width="34"
           />
         </g>
+        <!-- O Letter -->
         <g id="O-letter">
           <circle
             class="O-stroke"
@@ -133,6 +137,7 @@
             stroke-width="31"
           />
         </g>
+        <!-- Red Dot -->
         <g id="red-dot">
           <line
             x1="325"
@@ -150,9 +155,12 @@
       We're currently working hard to create our new website. We'll be live
       soon!
     </p>
+    <p *ngIf="daysLeft !== null" class="mb-3">
+      Days left to launch: {{ daysLeft }}
+    </p>
   </div>
 
-<button class="dev-btn">Developer login</button>
+  <button class="dev-btn" routerLink="/login">Developer login</button>
 
   <footer class="footer bg-dark text-white text-center py-3 fixed-bottom">
     <p class="mb-0">&copy; 2024 B1U3_G0B1IN. All rights reserved.</p>
