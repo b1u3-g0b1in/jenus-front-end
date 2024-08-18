@@ -1,26 +1,31 @@
-# Use the official Node.js image as the base image
-FROM node:18-alpine
+# syntax=docker/dockerfile:1.4
 
-# Set the working directory in the container
-WORKDIR /app
+FROM --platform=$BUILDPLATFORM node:17.0.1-bullseye-slim as builder
 
-# Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+RUN mkdir /project
+WORKDIR /project
 
-# Install dependencies
-RUN npm install
+RUN npm install -g @angular/cli@13
 
-# Copy the rest of the application code to the working directory
+COPY package.json package-lock.json ./
+RUN npm ci
+
 COPY . .
+CMD ["ng", "serve", "--host", "0.0.0.0"]
 
-# Build the Angular application
-RUN npm run build -- --configuration production --output-path=docs --base-href /jenus-front-end/
+FROM builder as dev-envs
 
-# Install an HTTP server to serve the application
-RUN npm install -g http-server
+RUN <<EOF
+apt-get update
+apt-get install -y --no-install-recommends git
+EOF
 
-# Expose the port the application will run on
-EXPOSE 8080
+RUN <<EOF
+useradd -s /bin/bash -m vscode
+groupadd docker
+usermod -aG docker vscode
+EOF
+# install Docker tools (cli, buildx, compose)
+COPY --from=gloursdocker/docker / /
 
-# Start the HTTP server and serve the built application
-CMD ["http-server", "docs"]
+CMD ["ng", "serve", "--host", "0.0.0.0"]
