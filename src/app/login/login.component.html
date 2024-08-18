@@ -1,0 +1,80 @@
+<div class="container" id="container">
+  <div class="form-container sign-up-container">
+    <form action="#">
+      <h3><b>Create your VIBE</b></h3>
+      <div class="social-container">
+        <a href="#" class="social-icon">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="#" class="social-icon">
+          <i class="fab fa-apple"></i>
+        </a>
+      </div>
+      <span>or use your email for registration</span>
+      <input
+        type="email"
+        placeholder="Email"
+        [(ngModel)]="email"
+        name="email"
+        id="email"
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        [(ngModel)]="password"
+        name="password"
+        id="password"
+      />
+      <input
+        type="text"
+        placeholder="User Name"
+        [(ngModel)]="username"
+        name="username"
+        id="username"
+      />
+      <button type="button" (click)="generateUsername()">
+        <i class="fas fa-magic"></i> Generate Username
+      </button>
+      <br />
+      <button>Join the Party</button>
+    </form>
+  </div>
+
+  <div class="form-container sign-in-container">
+    <form action="#">
+      <h1>Log in</h1>
+      <div class="social-container">
+        <a href="#" class="social-icon">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="#" class="social-icon">
+          <i class="fab fa-apple"></i>
+        </a>
+      </div>
+      <span>or use your account</span>
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <a href="#">Forgot your password?</a>
+      <button>Sign In</button>
+    </form>
+  </div>
+
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <h1>Welcome Back!</h1>
+        <p>To stay connected, log in with your info</p>
+        <button class="ghost" id="signIn" (click)="togglePanel(false)">
+          Log In
+        </button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h1>Hey There!</h1>
+        <p>Join us and start your cool journey today!</p>
+        <button class="ghost" id="signUp" (click)="togglePanel(true)">
+          Join the Party
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
