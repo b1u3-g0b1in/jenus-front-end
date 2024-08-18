@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Build the Angular application
-RUN npm run build -- --prod --output-path=docs --base-href /jenus-front-end/
+RUN npm run build -- --configuration production --output-path=docs --base-href /jenus-front-end/
 
 # Install an HTTP server to serve the application
 RUN npm install -g http-server
