@@ -15,16 +15,12 @@ CMD ["ng", "serve", "--host", "0.0.0.0"]
 
 FROM builder as dev-envs
 
-RUN <<EOF
-apt-get update
-apt-get install -y --no-install-recommends git
-EOF
+RUN apk update && apk add --no-cache git
 
-RUN <<EOF
-useradd -s /bin/bash -m vscode
-groupadd docker
-usermod -aG docker vscode
-EOF
+RUN adduser -D -h /home/vscode -s /bin/bash vscode
+RUN addgroup docker
+RUN addgroup vscode docker
+
 # install Docker tools (cli, buildx, compose)
 COPY --from=gloursdocker/docker / /
 
