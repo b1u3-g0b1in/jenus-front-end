@@ -21,6 +21,7 @@ body {
   min-height: 100vh;
   margin: -20px 0 50px;
 }
+
 h1 {
   font-weight: bold;
   margin: 0;
@@ -111,10 +112,10 @@ input {
   width: 768px;
   max-width: 100%;
   min-height: 480px;
-  display: flex; // Added
-  flex-direction: column; // Added
-  justify-content: start; // Added
-  align-items: start; // Added
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .form-floating {
@@ -144,10 +145,10 @@ input {
   width: 50%;
   opacity: 0;
   z-index: 1;
-  display: flex; // Added
-  flex-direction: column; // Added
-  justify-content: start; // Added
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .container.right-panel-active .sign-up-container {
